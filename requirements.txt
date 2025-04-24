@@ -1,0 +1,8 @@
+streamlit
+openai
+weaviate-client
+sentence-transformers
+torch
+google-cloud-storage
+protobuf 
+google-auth
