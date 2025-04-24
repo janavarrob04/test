@@ -23,7 +23,7 @@ st.set_page_config(page_title="Chat con NorIA", page_icon="🤖", layout="wide")
 # --- CONSTANTES ---
 MODEL_NAME = "intfloat/multilingual-e5-large"
 WEAVIATE_CLASS_NAME_DEFAULT = "Flujo_Caja_Mer_limpio2"
-LOGO_IMAGE_PATH = "logo.png" # ¡¡CAMBIA ESTO A LA RUTA DE TU LOGO!!
+LOGO_IMAGE_PATH = "logo.png" 
 LOGO_WIDTH_PX = 200
 MAX_HISTORY_LENGTH = 15
 
@@ -246,7 +246,7 @@ RESPUESTA DE NorIA:"""
         response = openai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}],
-            temperature=0.1
+            temperature=0.2
         )
         response_text = response.choices[0].message.content
         print(f"--- INFO: Respuesta cruda de OpenAI recibida.")
@@ -344,8 +344,19 @@ else:
     # Fallback si no hay logo
     st.markdown("<h1 style='text-align: center;'>Chat con NorIA 🤖</h1>", unsafe_allow_html=True)
 
-st.markdown("<h2 style='text-align: center;'>Asistente del Manual de Procedimientos</h2>", unsafe_allow_html=True)
-st.markdown("---")
+# --- Colores (ajusta si es necesario) ---
+color_azul = "#00205B"  # Un azul oscuro tipo corporativo
+color_amarillo = "#EAAA00" # Un amarillo dorado/mostaza
+
+# --- Título con colores ---
+st.markdown(f"""
+<h1 style='text-align: center;'>
+    <span style='color: {color_azul};'>Chat con Nor</span><span style='color: {color_amarillo};'>IA</span> 🤖
+</h1>
+""", unsafe_allow_html=True)
+
+st.write(f"Pregúntale sobre el Manual de Procedimientos: Flujo de Caja y Mercancías ")
+
 
 # --- Inicializar historial de chat ---
 if "chat_history" not in st.session_state:
