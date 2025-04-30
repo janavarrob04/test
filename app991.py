@@ -227,7 +227,7 @@ def generate_response(query, context):
 
 INSTRUCCIONES IMPORTANTES:
 1.  BASA TU RESPUESTA ÚNICAMENTE EN EL SIGUIENTE CONTEXTO. No inventes información ni uses conocimiento externo.
-2.  Si la respuesta se encuentra en el contexto, respóndela de forma clara y concisa, y organízala visualmente, si es posible, con viñetas.
+2.  Si la respuesta se encuentra en el contexto, respóndela de forma clara y organízala visualmente, si es posible, con viñetas.
 3.  Si la respuesta NO se encuentra en el contexto, di EXACTAMENTE: "No encuentro información sobre eso en el contexto proporcionado." No intentes adivinar.
 4.  Al final de tu respuesta (si encontraste información), AÑADE UNA LÍNEA SEPARADA que comience con "PÁGINAS CITADAS:" seguida de los números de página del contexto que utilizaste directamente para formar tu respuesta, separados por comas. Ejemplo: "PÁGINAS CITADAS: 15, 23".
 5.  Si dijiste "No encuentro información...", entonces usa "PÁGINAS CITADAS: N/A".
@@ -244,7 +244,7 @@ RESPUESTA DE NorIA:"""
     print(f"--- INFO: Llamando a OpenAI con un prompt de longitud ~{len(prompt)}...")
     try:
         response = openai.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4.1-mini",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.2
         )
