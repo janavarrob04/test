@@ -227,7 +227,7 @@ def generate_response(query, context):
 
 INSTRUCCIONES IMPORTANTES:
 1.  BASA TU RESPUESTA ÚNICAMENTE EN EL SIGUIENTE CONTEXTO. No inventes información ni uses conocimiento externo.
-2.  Si la respuesta se encuentra en el contexto, respóndela de forma clara y concisa.
+2.  Si la respuesta se encuentra en el contexto, respóndela de forma clara y concisa, y organízala visualmente, si es posible, con viñetas.
 3.  Si la respuesta NO se encuentra en el contexto, di EXACTAMENTE: "No encuentro información sobre eso en el contexto proporcionado." No intentes adivinar.
 4.  Al final de tu respuesta (si encontraste información), AÑADE UNA LÍNEA SEPARADA que comience con "PÁGINAS CITADAS:" seguida de los números de página del contexto que utilizaste directamente para formar tu respuesta, separados por comas. Ejemplo: "PÁGINAS CITADAS: 15, 23".
 5.  Si dijiste "No encuentro información...", entonces usa "PÁGINAS CITADAS: N/A".
@@ -337,7 +337,7 @@ except Exception as e:
 # --- Logo Banner ---
 logo_base64 = image_to_base64(LOGO_IMAGE_PATH)
 if logo_base64:
-    col1, col2, col3 = st.columns([1, 4, 1])
+    col1, col2, col3 = st.columns([1, 1, 6])
     with col2:
         st.image(logo_base64, width=LOGO_WIDTH_PX)
 else:
