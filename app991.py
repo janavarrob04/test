@@ -355,7 +355,7 @@ st.markdown(f"""
 </h1>
 """, unsafe_allow_html=True)
 
-st.write(f"Pregúntale sobre el Manual de Procedimientos: Flujo de Caja y Mercancías ")
+st.write(f"Pregúntale a ChatNori")
 
 
 # --- Inicializar historial de chat ---
