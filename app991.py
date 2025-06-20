@@ -408,7 +408,7 @@ for i, msg in enumerate(st.session_state.chat_history):
                          st.caption("_No se asociaron imágenes a esta página en las fuentes._")
 
 # --- Input del usuario ---
-user_input = st.chat_input("Escribe tu pregunta sobre el manual...")
+user_input = st.chat_input("Escribe tu pregunta a chat Nori...")
 
 if user_input:
     # Añadir pregunta del usuario al historial
